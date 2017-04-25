@@ -44,25 +44,22 @@ input#card-toggle {
     box-shadow: 0px 0px 7px rgba(0,0,0,0.5);
 }
 
-.card .front {
+.card .front, .card .back {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
 	border-radius: 3px;
-	background-image: url('assets/bg1.png');
 	padding: 20px;
 }
 
-.card .back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
+.card .front {
+	background-image: url('assets/bg1.png');
+}
+
+.card .back {	
 	transform: rotateX(180deg);
-	border-radius: 3px;
 	background-image: url(assets/myimg.jpg);
-    padding: 20px;
     background-size: cover;
 }
 
