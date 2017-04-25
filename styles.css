@@ -1,1 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700');
 
+* {
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	padding: 100px;
+}
+
+label {
+	cursor: pointer;
+	display: inline-block;
+	-webkit-perspective: 1000px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+}
+
+label:hover .card {
+	transform: rotateX(20deg);
+	box-shadow: 0 20px 20px rgba(50,50,50,.2);
+}
+
+label:hover #card-toggle:checked + .card {
+    transform: rotateX(160deg);
+    -webkit-transform: rotateX(160deg);
+    box-shadow: 0 20px 20px rgba(50,50,50,.2);
+}
+
+input#card-toggle {
+	display: none;
+}
+
+.card {
+	position: relative;
+	width: 470px;
+	height: 290px;
+	transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.5);
+}
+
+.card .front {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 3px;
+	background-image: url('assets/bg1.png');
+	padding: 20px;
+}
+
+.card .back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transform: rotateX(180deg);
+	border-radius: 3px;
+	background-image: url(assets/myimg.jpg);
+    padding: 20px;
+    background-size: cover;
+}
+
+input#card-toggle:checked + .card {
+	transform: rotateX(180deg);
+}
+
+.card .front h1 {
+	color: white;
+	font-weight: 300;
+	margin: 0px;
+}
+
+.card .front p {
+	margin: 0px;
+	color: white;
+}
+
+p small {
+	font-size: 12px;
+	font-weight: 400;
+	color: rgba(255,255,255,0.8);
+}
+
+p#info {
+	margin-top: 20px;
+	font-weight: 300;
+}
+
+p#email, p#website {
+	display: inline-block;
+	color: #d778e1;
+	font-size: 12px;
+	margin-top: 20px;
+	margin-right: 30px;
+}
+
+p#website a {
+	margin: 0;
+	padding: 0;
+	color: inherit;
+	font-size: inherit;
+}
+
+#enc-info {
+	margin-top: 30px;
+	display: inline-block;
+}
+
+#enc-info p {
+	font-size: 14px;
+	color: rgba(255,255,255,.7);
+	position: relative;
+	top:  -10px;
+	left: 10px;
+}
+
+#enc-info p span {
+	color: white;
+}
+
+#enc-info p a {
+	color: #d778e1;
+}
+
+#enc-info img, #enc-info p {
+	display: inline-block;
+} 
+
+#social-media {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+#social-media span {
+	margin: 0px 5px;
+}
